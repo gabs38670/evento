@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Formatura TI116 — Vai Dar Praia. Confirme sua presença.">
     <title>Formatura TI116 — Vai Dar Praia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
@@ -16,7 +26,7 @@
         <h1>Formatura TI116 — Vai Dar Praia</h1>
         <p class="chamada">Confraternização de formatura da turma de Técnico em Informática</p>
         <nav aria-hidden="true">
-            <a href="#evento">O evento</a>
+            <a href="#evento">Evento</a>
             <a href="#quando-onde">Quando e onde</a>
             <a href="#programacao">Programação</a>
             <a href="#confirmacao">Confirmar</a>
@@ -34,6 +44,8 @@
                 transporte para quem confirmar dentro do prazo.</p>
         </section>
 
+        <hr>
+
         <section id="quando-onde">
             <h3>Quando e onde</h3>
             <dl>
@@ -42,11 +54,14 @@
                 <dt>Horário</dt>
                 <dd>Das 9h às 18h</dd>
                 <dt>Onde</dt>
-                <dd>Prainha Branca, Guarujá  — litoral sul de São Paulo</dd>
+                <dd>Prainha Branca, Guarujá — litoral sul de São Paulo</dd>
                 <dt>Confirmação até</dt>
                 <dd><time datetime="2026-11-20">20 de novembro de 2026</time></dd>
             </dl>
         </section>
+
+         <hr>
+        
 
         <section id="programacao">
             <h3>Programação do dia</h3>
@@ -85,12 +100,24 @@
             </table>
         </section>
 
+         <hr>
+
         <section id="como-chegar">
             <h3>Como chegar</h3>
             <p>O ônibus sai do ponto combinado com a comissão. O trajeto leva
                 cerca de duas horas.</p>
-            <iframe src="mapa.html" width="100%" height="260" loading="lazy"></iframe>
+            <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14580.893259438992!2d-46.1837841!3d-23.8202353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdfc01c10e2afd%3A0xa0e02a4132af07d5!2sPraia%20Branca!5e0!3m2!1wpt-BR!2sbr!4v1700000000000!5m2!1wpt-BR!2sbr" 
+    width="100%" 
+    height="260" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
         </section>
+
+         <hr>
 
         <section id="confirmacao">
             <h3>Confirme sua presença</h3>
@@ -99,16 +126,21 @@
 
                 <div class="campo">
                     <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    <input type="text" id="nome" name="nome" minlength="3" autocomplete="name" required>
+                </div>
+
+                <div class="campo"><label for="data-nascimento">Data de Nascimento</label>
+                    <input type="date" name="data-nascimento" id="data-nascimento" autocomplete="bday">
                 </div>
 
                 <div class="campo">
+                    <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" autocomplete="email" placeholder="Seu e-mail" required>
                 </div>
 
                 <div class="campo">
                     <label for="telefone">Telefone com DDD</label>
-                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" pattern="[0-9\(\)\-\s]{10,16}"
+                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" pattern="[0-9\(\)\-\s]{10,16}" inputmode="tel"
                         required>
                     <p class="dica" id="dica-telefone">Só números, parênteses, traços e espaços.</p>
                 </div>
@@ -147,7 +179,16 @@
                         <option value="0">Nenhum</option>
                         <option value="1">1 acompanhante</option>
                         <option value="2">2 acompanhantes</option>
-                        <option value="3">3 ou mais</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="camiseta">Tamanho da Camiseta</label>
+                    <select name="camiseta" id="camiseta">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
                     </select>
                 </div>
 
@@ -167,6 +208,8 @@
 
             </form>
         </section>
+
+         <hr>
 
     </main>
 
